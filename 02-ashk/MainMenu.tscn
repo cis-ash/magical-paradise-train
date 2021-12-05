@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://02-ashk/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://02-ashk/MainMenu.gd" type="Script" id=2]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 191.679
+margin_top = 702.091
+margin_right = 832.679
+margin_bottom = 776.091
+custom_fonts/font = ExtResource( 1 )
+text = "board the train"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -495.181
+margin_top = 17.1367
+margin_right = 504.819
+margin_bottom = 659.137
+custom_fonts/font = ExtResource( 1 )
+text = "After reaching 100 members
+the paradise discord has 
+decided to make a
+microgame collection.
+
+You are playing it
+right now.
+
+most games are controlled
+with:
+mouse,arrows,spacebar, etc
+
+when you are ready to begin
+your journey click the button
+below"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
