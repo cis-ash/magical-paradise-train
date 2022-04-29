@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/judge.png-65acf77926518da37e80d29a27e86093.stex"
+path="res://.import/leave.webp-826802434c39c9c33f3d78df7f0fa668.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://69-brut/judge.png"
-dest_files=[ "res://.import/judge.png-65acf77926518da37e80d29a27e86093.stex" ]
+source_file="res://art/leave.webp"
+dest_files=[ "res://.import/leave.webp-826802434c39c9c33f3d78df7f0fa668.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

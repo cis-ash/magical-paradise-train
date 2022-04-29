@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://02-ashk/new_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://02-ashk/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://art/cutaway_door_right.png" type="Texture" id=3]
+[ext_resource path="res://art/cutaway_door_left.png" type="Texture" id=4]
+[ext_resource path="res://art/cutaway_train_car.png" type="Texture" id=5]
+[ext_resource path="res://02-ashk/Node2D.gd" type="Script" id=6]
+[ext_resource path="res://art/leave.webp" type="Texture" id=7]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -10,6 +15,39 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( -1580.43, -957.052 )
+z_index = -60
+
+[node name="ColorRect" type="ColorRect" parent="Node2D2"]
+margin_right = 4072.0
+margin_bottom = 2806.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 514.237, 395.381 )
+scale = Vector2( 1.14928, 1.14928 )
+z_index = -50
+script = ExtResource( 6 )
+door_count = 15
+
+[node name="CutawayTrainCar" type="Sprite" parent="Node2D"]
+position = Vector2( 98.7247, -57.3634 )
+texture = ExtResource( 5 )
+
+[node name="CutawayDoorRight" type="Sprite" parent="Node2D/CutawayTrainCar"]
+show_behind_parent = true
+position = Vector2( 45.8647, 29.0895 )
+texture = ExtResource( 3 )
+
+[node name="DoorLeft" type="Sprite" parent="Node2D/CutawayTrainCar"]
+show_behind_parent = true
+position = Vector2( -268.044, 24.1586 )
+texture = ExtResource( 4 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 191.679
@@ -22,7 +60,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Particles2D" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2( 608.663, -884.638 )
+z_index = 50
+amount = 51
+lifetime = 5.06
+draw_order = 1
+texture = ExtResource( 7 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1000, 600 )
+gravity = Vector2( 0, 300 )
+angular_velocity = 50.0
+angular_velocity_random = 1.0
+damping = 100.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.57
+scale_amount_random = 0.74
+color = Color( 0.800781, 0.800781, 0.800781, 1 )
+hue_variation = -1.0
+hue_variation_random = 0.06
+
 [node name="Label" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -495.181
