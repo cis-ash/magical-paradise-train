@@ -32,8 +32,8 @@ func _process(delta):
 		doors[i].scale = Vector2.ONE * pow(2.0, lerp(-2.0, 2, (i + loop_time)/(door_count + 1.0) ) )
 		var door_lerp = -3.5 + 10.0 * (i + loop_time)/(door_count + 1.0)
 		door_lerp = clamp(door_lerp, 0.0, 1.0)
-		doors[i].get_child(0).position.x = lerp(45, 225, door_lerp)
-		doors[i].get_child(1).position.x = lerp(-102, -265, door_lerp)
+		doors[i].get_child(0).position.x = lerp(45, 225, smoothstep(45, 225, lerp(45, 225, door_lerp)))
+		doors[i].get_child(1).position.x = lerp(-102, -265, smoothstep(-102, -265, lerp(-102, -265, door_lerp)))
 	
 	
 	
